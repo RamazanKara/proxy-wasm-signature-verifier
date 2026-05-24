@@ -19,7 +19,7 @@ hmac = "0.12"
 proxy-wasm = "0.2.5"
 serde = { version = "1", features = ["derive"] }
 serde-json-wasm = "1"
-sha2 = "0.10"
+sha2 = "0.11"
 
 [profile.release]
 codegen-units = 1
