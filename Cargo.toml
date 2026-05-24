@@ -1,0 +1,30 @@
+[package]
+name = "proxy-wasm-signature-verifier"
+version = "0.1.0"
+edition = "2021"
+license = "BSD-2-Clause"
+description = "Proxy-Wasm HMAC request signature verifier for Varnish/vmod-wasm"
+repository = "https://github.com/RamazanKara/proxy-wasm-signature-verifier"
+readme = "README.md"
+keywords = ["proxy-wasm", "varnish", "hmac", "signature", "edge"]
+categories = ["wasm", "web-programming"]
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hex = "0.4"
+hmac = "0.12"
+proxy-wasm = "0.2.5"
+serde = { version = "1", features = ["derive"] }
+serde-json-wasm = "1"
+sha2 = "0.10"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true
+
