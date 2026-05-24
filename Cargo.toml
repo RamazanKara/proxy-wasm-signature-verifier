@@ -15,7 +15,7 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 hex = "0.4"
-hmac = "0.12"
+hmac = "0.13"
 proxy-wasm = "0.2.5"
 serde = { version = "1", features = ["derive"] }
 serde-json-wasm = "1"
